@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="children red" id="banner"></div>
+        <button id="greeting" onclick="javascript: alert('Hello button')">
+          Hello
+        </button>
+      </div>
+      <div class="wrapper">
+        <input type="text" name="kucing" />
+      </div>
+      <div class="wrapper" id="pricing"></div>
+    </main>
+    <footer>
+      <div id="sitemap"></div>
+      <div id="call-to-action"></div>
+    </footer>
+    <script>
+      // Element query
+      const element = document.getElementById("greeting");
+
+      console.dir(element);
+      console.log(element.spellcheck);
+
+      //   Event based on function reference
+      function fungsiSaya() {
+        alert("Hello fungsi");
+      }
+
+      //   Event based on element query
+      const element2 = document.getElementById("greeting2");
+      element2.onclick = function () {
+        alert("Hello element query");
+      };
+
+      // Event based on listener
+      const kucingSaya = document.addEventListener("click", function () {
+        console.log("Saya kena click");
+      });
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
